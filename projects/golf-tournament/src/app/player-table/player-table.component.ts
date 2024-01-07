@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MSTSocketService } from '../services/mst-socket.service';
+import { GolfPlayerData } from '../shared/interfaces/golf-player-data.interface';
 
 @Component({
   selector: 'app-player-table',
@@ -12,10 +13,8 @@ export class PlayerTableComponent implements OnInit {
   dataFromServer: any;
   constructor(private mstSocketService: MSTSocketService) {}
   ngOnInit() {
-    // Subscribe to the 'data-update' event
-    this.mstSocketService.receiveDataUpdate().subscribe((data: any) => {
+      this.mstSocketService.receiveData().subscribe((data: GolfPlayerData) => {
       this.dataFromServer = data;
-      // Process the data as needed
     });
   }
 }
