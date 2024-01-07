@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MSTSocketService } from '../services/mst-socket.service';
 import { GolfPlayerData } from '../shared/interfaces/golf-player-data.interface';
-import { NgFor, getLocaleDateFormat } from '@angular/common';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-player-table',
