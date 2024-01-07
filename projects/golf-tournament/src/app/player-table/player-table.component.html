@@ -1,6 +1,27 @@
+<!-- player-table.component.html -->
 <div>
-    <p>player-table works!</p>
-    <th>My Table</th>
-    
-</div>
-
+    <table>
+      <thead>
+        <tr>
+          <th>Player Id</th>
+          <th>Name</th>
+          <th>Today's Score</th>
+          <th>Current Position</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let player of currentPageData()" class="table-row">
+          <td>{{ player.MSTID }}</td>
+          <td>{{ player.First }} {{ player.Last }}</td>
+          <td>{{ player.Today }}</td>
+          <td>{{ player.position }}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <div class="pagination">
+      <button (click)="prevPage()">Previous</button>
+      <span>Page {{currentPage + 1}} of {{ totalPages()  }}</span>
+      <button (click)="nextPage()">Next</button>
+    </div>
+  </div>

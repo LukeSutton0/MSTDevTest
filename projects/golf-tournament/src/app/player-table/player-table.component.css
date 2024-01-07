@@ -1,0 +1,6 @@
+.table-row:hover{
+    background-color: grey;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    cursor: pointer;
+}

@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { NavbarComponent } from './shared/navbar/navbar.component';
 import { PlayerTableComponent } from './player-table/player-table.component';
-import { SharedModule } from './shared/shared.module'; // Adjust the path
+import { SharedModule } from './shared/shared.module';
 
 @Component({
   selector: 'app-root',
