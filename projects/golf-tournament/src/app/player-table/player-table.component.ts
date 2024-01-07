@@ -15,7 +15,7 @@ export class PlayerTableComponent implements OnInit {
   playerData: GolfPlayerData[] = []; //list of playerdata objects
   pages: GolfPlayerData[][] = [[]]; //2d , each outer element = page
   currentPage = 0;
-  pageSize = 2; //num of people per page
+  pageSize = 10; //num of people per page
   maxPages = 10;
   constructor(private mstSocketService: MSTSocketService) {}
   ngOnInit() {
